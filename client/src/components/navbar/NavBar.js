@@ -79,7 +79,7 @@ function NavBar() {
           {userRoles.includes('user') && (
             <li>
               <NavLink
-                to="plants"
+                to="presentation"
                 className={({ isActive }) =>
                   isActive ? 'nav-link nav-link-active' : 'nav-link'
                 }

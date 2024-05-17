@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "plants",
+        path: "presentation",
         element: (
           <ProtectedRoute allowedRoles={['user']}>
             <PresentationPage />
