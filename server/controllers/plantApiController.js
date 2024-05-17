@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const axios = require("axios");
 const fs = require("fs");
 const FormData = require("form-data");
-const parsePlantRawdata = require("../middleware/parsePlantRawData.js");
+const parsePlantRawdata = require("./../middleware/parsePlantRawdata.js");
 
 const doctorRat = require("../models/assesmentsModel.js");
 const plantApiController = {};
