@@ -54,6 +54,7 @@
 }
 
 .modal-overlay {
+  background-color: rgb(255, 255, 255);
   z-index: 1100; 
 }
 

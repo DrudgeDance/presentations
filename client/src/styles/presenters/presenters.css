@@ -1,0 +1,195 @@
+/* Combined CSS */
+
+/* Styles from presenters copy.css */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-header h1 {
+  font-size: 2.5em;
+  color: #228B22; /* ForestGreen */
+}
+
+.about-section {
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  color: #228B22;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  color: #228B22;
+  margin-bottom: 10px;
+}
+
+.about-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #228B22;
+}
+
+.about-footer {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.about-footer p {
+  color: #228B22;
+}
+
+/* Presenter card container */
+.presenter-card-container {
+  display: grid;
+  gap: 16px; /* Adjust gap between cards as needed */
+}
+
+.presenter-card {
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Additional styles for the presenter card */
+.profile-photo-container {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.profile-photo {
+  width: 167px;
+  height: 167px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.presenter-name {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.presenter-detail {
+  font-size: 1em;
+  margin: 0.25em 0;
+}
+
+.list-item-content__button-container {
+  margin-top: 1em;
+}
+
+.list-item-content__button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.list-item-content__button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive layout adjustments */
+@media (min-width: 768px) {
+  .presenter-card-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens and above */
+  }
+
+  .presenter-card-container.even-row {
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr; /* Center the cards in the even row */
+  }
+}
+
+@media (min-width: 1200px) {
+  .presenter-card-container {
+    grid-template-columns: repeat(6, 1fr); /* 6 columns for large screens */
+  }
+
+  .presenter-card-container.even-row {
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr; /* Center the cards in the even row */
+  }
+}
+
+/* Styles from presenters.css */
+.profile-photo {
+  filter: grayscale(100%);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-section {
+  width: 100%;
+  max-width: 1200px; /* Adjust max-width as needed */
+  padding: 0 20px; /* Add padding on the sides */
+}
+
+.presenter-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px; /* Space between rows */
+}
+
+.presenter-card {
+  flex: 1 0 21%; /* 4 cards per row with some spacing */
+  box-sizing: border-box;
+  margin: 10px; /* Space between cards */
+  max-width: 220px; /* Ensure max-width for cards */
+  min-width: 200px; /* Ensure min-width for cards */
+}
+
+.profile-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.presenter-detail {
+  margin: 5px 0;
+}
+
+.list-item-content__button-container {
+  margin-top: 10px;
+}
+
+.list-item-content__button {
+  text-decoration: none;
+  color: white;
+  background-color: #228B22;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.list-item-content__button:hover {
+  background-color: #228B22;
+}

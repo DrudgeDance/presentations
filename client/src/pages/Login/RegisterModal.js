@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Modal from "../../components/visual/Modal.js";
 import LoginPage from "./Login.js";
 import SignupPage from "./Signup.js";
-import BackgroundImage from "../../components/visual/BackgroundImage.js";
 import { openModal, closeModal } from '../../features/modals/modalsSlice.js'
 
 function RegisterModal() {
@@ -28,7 +27,6 @@ function RegisterModal() {
 
   const modalBody = (
     <div style={{ position: 'relative', height: '100%', width: '100%' }}>
-      <BackgroundImage />
 
       { isLogin ? ( 
         <LoginPage toggleForm={toggleForm} /> 

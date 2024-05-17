@@ -51,11 +51,11 @@ function NavBar() {
                 isActive ? 'nav-link nav-link-active' : 'nav-link'
               }
             >
-              About
+              Presenters
             </NavLink>
           </li>
 
-            <li>
+            {/* <li>
                 <NavLink
                   to="contact"
                   className={({ isActive }) =>
@@ -64,7 +64,7 @@ function NavBar() {
                 >
                   Contact
                 </NavLink>
-              </li>
+              </li> */}
 
           {/* <li>
             <NavLink
@@ -84,7 +84,7 @@ function NavBar() {
                   isActive ? 'nav-link nav-link-active' : 'nav-link'
                 }
               >
-                My Plants
+                Live Presentation
               </NavLink>
             </li>
           )}

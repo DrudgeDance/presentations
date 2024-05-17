@@ -14,12 +14,12 @@ export default {
     publicPath: "/",
   },
   resolve: {
-    extensions: [".js"],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -43,6 +43,18 @@ export default {
             },
           },
         ],
+      },
+      {
+        test: /\.(mp4|mov)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'videos/'
+            }
+          }
+        ]
       },
     ],
   },

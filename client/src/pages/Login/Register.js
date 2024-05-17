@@ -10,11 +10,9 @@ export default function Register() {
   };
 
   return (
-    <div className="main-content">
-      {/* <h1>Green Family</h1> */}
-
-      <div className="register main-container">
-        <div className="register card">
+    <div className="relative min-h-screen">
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="register-card bg-white p-4 shadow-lg rounded-lg">
           {isLogin ? (
             <Login toggleForm={toggleForm} />
           ) : (
@@ -25,3 +23,4 @@ export default function Register() {
     </div>
   );
 }
+

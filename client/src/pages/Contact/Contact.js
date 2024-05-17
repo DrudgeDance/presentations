@@ -1,5 +1,5 @@
 import React from 'react';
-import AddPlantForm from './../Plants/AddPlantForm.js';
+import AddPlantForm from '../Presentation/AddPlantForm.js';
 
 const Contact = () => {
   return (
