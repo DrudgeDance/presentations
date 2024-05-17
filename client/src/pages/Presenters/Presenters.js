@@ -75,9 +75,9 @@ const About = () => (
     <section className="about-section">
       <h2>Timeline of Presentations</h2>
       <ul>
-        <li>Plant Identification: Identify plants by uploading a photo.</li>
-        <li>Issue Diagnosis: Detect and diagnose issues like watering, pruning, and pests.</li>
-        <li>Care Instructions: Get personalized care tips and recommendations for your plants.</li>
+        <li>Names of presentations.</li>
+        <li>Other info.</li>
+        <li>More info.</li>
       </ul>
     </section>
     <section className="about-section">
