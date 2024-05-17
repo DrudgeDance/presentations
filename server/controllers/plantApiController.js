@@ -5,7 +5,7 @@ const fs = require("fs");
 const FormData = require("form-data");
 const parsePlantRawdata = require("./../middleware/parsePlantRawdata.js");
 
-const doctorRat = require("../models/assesmentsModel.js");
+// const doctorRat = require("../models/assesmentsModel.js");
 const plantApiController = {};
 
 plantApiController.getPlantData = async (req, res, next) => {
@@ -52,7 +52,7 @@ plantApiController.databaseSave = async (req, res, next) => {
   try {
     console.log("assesment", assessment);
     console.log("name", name);
-    const assess = await doctorRat.create({
+    // const assess = await doctorRat.create({
       assessment: assessment,
       name: name,
     });
