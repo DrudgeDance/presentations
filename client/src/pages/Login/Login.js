@@ -30,7 +30,7 @@ const Login = ({ toggleForm }) => {
       
       dispatch(setCredentials({ ...res }));
       dispatch(closeModal({ modalId: 'loginSignupModal' }));
-      navigate("/plants");
+      navigate("/presentation");
 
     } catch (err) {
       console.log("Error logging in:", err);
