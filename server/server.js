@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 // app.use("/images", express.static(path.join(__dirname, "public")));
 
 // Server Index || Client build path
-app.use("/build", express.static(path.join(__dirname, "./../client/dist")));
+app.use("/", express.static(path.join(__dirname, "./../client/dist")));
 
 app.use("/auth", authRouter);
 
