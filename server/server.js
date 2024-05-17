@@ -26,13 +26,13 @@ app.use(
 );
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "../client/public")));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
-// Serve images
-app.use("/images", express.static(path.join(__dirname, "public")));
+// // Serve images
+// app.use("/images", express.static(path.join(__dirname, "public")));
 
 // Server Index || Client build path
-app.use("/build", express.static(path.join(__dirname, "../client/dist")));
+app.use("/build", express.static(path.join(__dirname, "./../client/dist")));
 
 app.use("/auth", authRouter);
 
