@@ -53,9 +53,9 @@ plantApiController.databaseSave = async (req, res, next) => {
     console.log("assesment", assessment);
     console.log("name", name);
     // const assess = await doctorRat.create({
-      assessment: assessment,
-      name: name,
-    });
+    //   assessment: assessment,
+    //   name: name,
+    // });
     console.log("database save", res.locals.response);
   } catch (error) {
     console.log(error);
