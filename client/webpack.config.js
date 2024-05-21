@@ -44,18 +44,6 @@ export default {
           },
         ],
       },
-      {
-        test: /\.(mp4|mov)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'videos/'
-            }
-          }
-        ]
-      },
     ],
   },
   devServer: {

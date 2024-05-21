@@ -3,7 +3,8 @@ import { Provider } from "react-redux";
 import store from "./store.js";
 import { createRoot } from "react-dom/client";
 import App from "./App.js";
-import "./index.css";
+
+import './styles/styles.css';
 
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/router.js"; 
