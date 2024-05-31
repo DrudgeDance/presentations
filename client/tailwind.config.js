@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       minWidth: {
         'screen-375': '375px',
+        'screen-415': '415px',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],

@@ -24,15 +24,15 @@ const UniversityAcknowledgment = () => {
   }, []);
 
   return (
-    <div className="mt-[1vw] bg-white p-5 flex justify-center">
+    <div className="mt-0 bg-white px-5 flex justify-center">
       <div className="max-w-4xl w-full">
         <h3 className="text-left text-[#9b088c] text-lg mb-2 font-bold">
-          Supporting Universities
+          The Universities:
         </h3>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-4">
           {images.map((src, index) => (
-            <div key={index} className="flex items-center justify-center p-2">
-              <img src={src} alt={`University ${index + 1}`} className="max-w-[181px] w-full h-auto mb-0" />
+            <div key={index} className="flex items-center justify-center">
+              <img src={src} alt={`University ${index + 1}`} className="max-w-[208px] w-full h-auto mb-0" />
             </div>
           ))}
         </div>

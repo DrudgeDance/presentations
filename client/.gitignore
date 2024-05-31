@@ -5,6 +5,8 @@ dist/
 # DEV MISC - specific files
 .env
 package-lock.json
+yarn.lock
+package-lock.json
 
 # MAC - General
 .DS_Store

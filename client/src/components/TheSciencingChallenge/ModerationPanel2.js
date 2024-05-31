@@ -4,7 +4,7 @@ function CombinedDetails() {
   return (
     <div className="mt-[1vw] bg-white p-5 flex justify-center">
       <div className="max-w-4xl w-full">
-        <div className="w-full mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center">
+        <div className="w-full mb-4 flex flex-col sm:flex-col sm:justify-between sm:items-center">
           <h3 className="text-left text-[#9b088c] text-lg font-bold mb-2 sm:mb-0">
             June 18th, 2024, 4pm - 6pm (EDT)
           </h3>
@@ -15,9 +15,9 @@ function CombinedDetails() {
         <div className="w-full mb-4">
           <div className="flex flex-col sm:flex-row items-baseline mb-4">
             <h3 className="text-left text-[#9b088c] text-lg font-bold min-w-[100px] mb-2 sm:mb-0">
-              Arbiter:
+              Moderator:
             </h3>
-            <p className="text-lg text-left ml-1 text-[#636363]"> 
+            <p className="text-lg text-left ml-1 text-[#636363]">
               <em>Tales Lelis</em>, Regional Business Director at Evonik
             </p>
           </div>

@@ -16,30 +16,19 @@ export const router = createBrowserRouter([
     element: <App />,                     // ENTRY POINT FOR <APP>
     errorElement: <Error />,
     children: [
-      { path: "*", element: <NotFound /> },
-      // {
-      //   index: true,
-      //   element: <About />,
-      // },
       {
-        path: "contact",
-        element: (
-          <ProtectedRoute allowedRoles={['user']}>
-            {/* <Contact /> */}
-          </ProtectedRoute>
-        ), 
+        path: "error",
+        element: <Error />,                // Specific route for error
       },
       {
-        path: "register",
-        element: <Register />,
+        path: "notfound",
+        element: <NotFound />,             // Specific route for not found
       },
-      {
-        path: "presentation",
-        element: (
-          <ProtectedRoute allowedRoles={['user']}>
-          </ProtectedRoute>
-        ),
-      },
+      { 
+        path: "*", 
+        element: <NotFound />              // Catch-all should be last
+      }
     ],
   },
 ]);
+
