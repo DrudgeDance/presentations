@@ -1,11 +1,14 @@
 const { Pool } = require('pg');
 
-const PG_URI = 'postgres://lvwoywhp:3cIMXnt6IduC3hSuGRMEJ4GS4aCUpY21@bubble.db.elephantsql.com/lvwoywhp';
-
 // create a new pool here using the connection string above
 const pool = new Pool({
-  connectionString: PG_URI
+  user: process.env.EC2_SQL_USER,
+  host: process.env.EC2_SQL_HOST,
+  database: process.env.EC2_SQL_DATABASE,
+  password: process.env.EC2_SQL_PASSWORD,
+  port: process.env.EC2_SQL_PORT,
 });
+
 
 // Adding some notes about the database here will be helpful for future you or other developers.
 // Schema for the database can be found below:
