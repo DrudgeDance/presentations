@@ -1,9 +1,9 @@
 import React from 'react';
-import EvonikRP from './../../assets/images/evonik-rp.jpg'; // Adjust the path as necessary
+import EvonikRP from './../../assets/images/evonik-rp.png'; // Adjust the path as necessary
 
 function Footer() {
   return (
-    <div className="mt-[1vw] bg-white p-5 flex justify-center w-full relative min-w-[335px]">
+    <div className="mt-[1vw] bg-white p-5 flex justify-center w-full min-w-[335px]">
       <div className="max-w-4xl w-full">
         <div className="flex flex-col items-center w-full mb-12"> {/* Added mb-10 for margin-bottom */}
           <div className="w-full flex justify-center items-center">

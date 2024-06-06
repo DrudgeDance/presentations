@@ -1,9 +1,9 @@
 export const imagePaths = [
-  'colleges/UniversityOfFlorida.png',
-  'colleges/VirginiaTech.png',
-  'colleges/CornellUniversity.png',
-  'colleges/UniversityOfMinnesota.png',
-  'colleges/UniversityOfMaryland.jpg',
-  'colleges/MichiganStateUniversity.jpg',
-  'colleges/UCDavis.png',
+  'colleges/UF.png',
+  'colleges/VT.png',
+  'colleges/Cornell.png',
+  'colleges/UMN.png',
+  'colleges/UMD.png',
+  'colleges/MSU.png',
+  'colleges/UC.png',
 ];

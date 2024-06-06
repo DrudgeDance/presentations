@@ -1,13 +1,15 @@
 const { Pool } = require('pg');
 
 // create a new pool here using the connection string above
-const pool = new Pool({
-  user: process.env.EC2_SQL_USER,
-  host: process.env.EC2_SQL_HOST,
-  database: process.env.EC2_SQL_DATABASE,
-  password: process.env.EC2_SQL_PASSWORD,
-  port: process.env.EC2_SQL_PORT,
-});
+const pool = new Pool(
+  {
+    user: process.env.EC2_SQL_USER,
+    host: process.env.EC2_SQL_HOST,
+    database: process.env.EC2_SQL_DATABASE,
+    password: process.env.EC2_SQL_PASSWORD,
+    port: process.env.EC2_SQL_PORT,
+  }
+);
 
 
 // Adding some notes about the database here will be helpful for future you or other developers.

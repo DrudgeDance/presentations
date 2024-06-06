@@ -11,7 +11,7 @@ export default function Register() {
 
   return (
     <div className="relative min-h-screen">
-      <div className="absolute inset-0 flex justify-center items-center">
+      <div className="inset-0 flex justify-center items-center">
         <div className="register-card bg-white p-4 shadow-lg rounded-lg">
           {isLogin ? (
             <Login toggleForm={toggleForm} />

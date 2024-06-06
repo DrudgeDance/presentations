@@ -1,5 +1,5 @@
 import React from 'react';
-import ChallengeImage from './../../assets/images/tsc.jpg';
+import ChallengeImage from './../../assets/images/tsc.png';
 
 const Welcome = () => (
   <>
@@ -14,13 +14,13 @@ const Welcome = () => (
             />
           </div>
         </div>
-        <div className="w-1/2 flex flex-col justify-end items-end pl-4 text-right" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="font-poppins mb-0" style={{ color: '#9b088c' }}>
-            <div className="text-container">
-              <div className="text no-wrap">
+        <div className="w-1/2 flex flex-col justify-end items-end pl-4 text-right z-10">
+          <div className="font-poppins mb-0 text-[#9b088c]">
+            <div className="max-w-full overflow-visible text-ellipsis">
+              <div className="whitespace-nowrap text-[calc(10px+2vw)] sm:text-[calc(12px+2vw)] md:text-[calc(14px+2vw)] lg:text-[calc(16px+2vw)] xl:text-[40px]">
                 <strong>Welcome to the</strong>
               </div>
-              <div className="text no-wrap">
+              <div className="whitespace-nowrap text-[calc(10px+2vw)] sm:text-[calc(12px+2vw)] md:text-[calc(14px+2vw)] lg:text-[calc(16px+2vw)] xl:text-[40px]">
                 <strong>2024 Finals!</strong>
               </div>
             </div>
@@ -28,44 +28,7 @@ const Welcome = () => (
         </div>
       </div>
     </div>
-
-    <style jsx>{`
-      .text-container {
-        max-width: 100%;
-        overflow: visible;
-        text-overflow: ellipsis;
-      }
-      .no-wrap {
-        white-space: nowrap;
-      }
-      .text {
-        font-size: calc(10px + 2vw); /* Responsive font size relative to viewport width */
-      }
-      @media (min-width: 640px) {
-        .text {
-          font-size: calc(12px + 2vw); /* Adjust font size for larger screens */
-        }
-      }
-      @media (min-width: 768px) {
-        .text {
-          font-size: calc(14px + 2vw); /* Further adjust font size for medium screens */
-        }
-      }
-      @media (min-width: 1024px) {
-        .text {
-          font-size: calc(16px + 2vw); /* Further adjust font size for large screens */
-        }
-      }
-      @media (min-width: 1200px) {
-        .text {
-          font-size: 40px; /* Stop growing the font size at 1200px viewport width */
-        }
-      }
-    `}</style>
   </>
 );
-
-
-
 
 export default Welcome;

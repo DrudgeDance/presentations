@@ -4,31 +4,41 @@ import { createBrowserRouter } from "react-router-dom";
 import NotFound from "../components/NotFound/NotFound.js";
 import Error from "../components/NotFound/Error.js";
 
-import Register from "../components/WatchLive/Register.js";
-
-import App from "./../App.js"
-
-import ProtectedRoute from "./ProtectedRoute.js"
+import App from "../App.js";
+import WatchLive1 from "../components/TheSciencingChallenge/WatchLive1.js";
+import WatchLiveProtected from "../components/TheSciencingChallenge/WatchLiveProtected.js";
+import ProtectedRoute from "./ProtectedRoute.js";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,                     // ENTRY POINT FOR <APP>
+    element: <App />,  // Main App component
     errorElement: <Error />,
     children: [
       {
+        path: "watchlive",
+        element: <WatchLive1 />,
+      },
+      {
+        path: "watchliveprotected",
+        element: (
+          <ProtectedRoute allowedRoles={['admin', 'user']}>
+            <WatchLiveProtected />
+          </ProtectedRoute>
+        ),
+      },
+      {
         path: "error",
-        element: <Error />,                // Specific route for error
+        element: <Error />, // Specific route for error
       },
       {
         path: "notfound",
-        element: <NotFound />,             // Specific route for not found
+        element: <NotFound />, // Specific route for not found
       },
-      { 
-        path: "*", 
-        element: <NotFound />              // Catch-all should be last
+      {
+        path: "*",
+        element: <NotFound />, // Catch-all should be last
       }
     ],
   },
 ]);
-

@@ -6,9 +6,6 @@ import { apiSlice } from "./features/api/http_apiSlice.js";
 
 import { plantsApiSlice } from "./features/api/http_plantsApiSlice.js";
 
-
-
-
 const store = configureStore({
   reducer: {
     auth: authReducer,
