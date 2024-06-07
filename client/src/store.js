@@ -1,21 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-
-import authReducer from "./features/auth/authSlice.js";
-import { apiSlice } from "./features/api/http_apiSlice.js";
-
-import { plantsApiSlice } from "./features/api/http_plantsApiSlice.js";
+import modalReducer from "./features/modal/modalSlice.js";
+import wauthReducer from './features/wauth/wauthSlice.js';
 
 const store = configureStore({
   reducer: {
-    auth: authReducer,
-    [apiSlice.reducerPath]: apiSlice.reducer,
-    [plantsApiSlice.reducerPath]: plantsApiSlice.reducer,
+    modal: modalReducer,
+    wauth: wauthReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
-      apiSlice.middleware,
-      plantsApiSlice.middleware,
     ),
   devTools: true,
 });

@@ -1,42 +1,27 @@
-import React, { useState, useEffect } from 'react';
+// src/Watch.js
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchWatchState } from './../../features/wauth/wauthSlice.js';
+import { openModal, closeModal } from './../../features/modal/modalSlice.js';
 import WatchLive1 from './WatchLive1.js';
 import WatchLiveProtected from './WatchLiveProtected.js';
 import CodeModal from './WatchModal/_Entry.js';
 
 function Watch() {
-  const [showStream, setShowStream] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch();
+  const isWatching = useSelector((state) => state.wauth.isWatching);
+  const showModal = useSelector((state) => state.modal.showModal);
 
   useEffect(() => {
-    const fetchAuthState = async () => {
-      try {
-        const response = await fetch('/auth');
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const contentType = response.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/json')) {
-          throw new Error('Response is not JSON');
-        }
-
-        const data = await response.json();
-        setShowStream(data.message === 'authorized');
-      } catch (error) {
-        console.error('Error fetching auth state:', error);
-      }
-    };
-
-    fetchAuthState();
-  }, []);
+    dispatch(fetchWatchState());
+  }, [dispatch]);
 
   const handleWatchLiveClick = () => {
-    setShowModal(true);
+    dispatch(openModal());
   };
 
   const handleCloseModal = () => {
-    setShowModal(false);
+    dispatch(closeModal());
   };
 
   const handleCodeSubmit = async (code) => {
@@ -54,8 +39,8 @@ function Watch() {
       }
 
       // Assuming the server sets the cookie automatically on success
-      setShowStream(true);
-      setShowModal(false);
+      dispatch(fetchWatchState());
+      dispatch(closeModal());
     } catch (error) {
       console.error('Error submitting code:', error);
     }
@@ -63,7 +48,7 @@ function Watch() {
 
   return (
     <>
-      {showStream ? (
+      {isWatching ? (
         <WatchLiveProtected />
       ) : (
         <WatchLive1 onWatchLive={handleWatchLiveClick} />

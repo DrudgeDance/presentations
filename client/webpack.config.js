@@ -1,7 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { fileURLToPath } from "url";
-import { createProxyMiddleware } from "http-proxy-middleware";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,9 +11,6 @@ export default {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     publicPath: "/",
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -33,7 +29,7 @@ export default {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|svg)$/i,
         use: [
           {
             loader: "file-loader",
@@ -54,21 +50,7 @@ export default {
     historyApiFallback: true,
     proxy: [
       {
-        context: ['/api'],
-        changeOrigin: true,
-        secure: false,
-        target: `http://3.139.77.236:3000/`,
-        cookieDomainRewrite: "localhost",
-      },
-      {
-        context: ['/auth'],
-        changeOrigin: true,
-        secure: false,
-        target: `http://3.139.77.236:3000/`,
-        cookieDomainRewrite: "localhost",
-      },
-      {
-        context: ['/userPlant'],
+        context: ['/wauth'],
         changeOrigin: true,
         secure: false,
         target: `http://3.139.77.236:3000/`,

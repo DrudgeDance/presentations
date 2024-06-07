@@ -19,10 +19,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {
-      display: ['print'],
-    },
-  },
   plugins: [],
 };

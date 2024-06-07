@@ -3,7 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from './../../features/modals/modalsSlice.js';
 import RegisterModal from '../WatchLive/RegisterModal.js';
-import { useLogoutMutation } from '../../features/api/http_registerSlice.js';
+// import { useLogoutMutation } from '../../features/api/http_registerSlice.js';
 import { clearCredentials } from '../../features/auth/authSlice.js';
 
 function NavBar() {
@@ -14,7 +14,7 @@ function NavBar() {
 
   const token = localStorage.getItem('token');
 
-  const [ logoutApiCall ] = useLogoutMutation();
+  // const [ logoutApiCall ] = useLogoutMutation();
 
   const handleOpenModal = useCallback(() => {
     dispatch(openModal({ modalId: 'loginSignupModal' }));
