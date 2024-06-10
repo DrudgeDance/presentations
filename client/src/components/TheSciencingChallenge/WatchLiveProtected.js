@@ -1,39 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-function WatchLiveProtected() {
-  const [videoURL, setVideoURL] = useState('');
+function WatchLiveProtected({ url }) {
+  const fullscreen = useSelector((state) => state.watchCode.fullscreen);
+  const iframeRef = React.useRef(null);
 
-  useEffect(() => {
-    // Fetch the video URL from the backend
-    const fetchVideoURL = async () => {
-      try {
-        const response = await fetch('/api/video-url');
-        const data = await response.json();
-        setVideoURL(data.url);
-      } catch (error) {
-        console.error('Error fetching video URL:', error);
-      }
-    };
+  // Append 'autoplay=1' and 'mute=1' to automatically play and start the video muted.
+  const enhancedUrl = `${url}&autoplay=1&mute=1`;
 
-    fetchVideoURL();
-  }, []);
+  React.useEffect(() => {
+    if (fullscreen && iframeRef.current) {
+      iframeRef.current.requestFullscreen().catch(err => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
+    }
+  }, [fullscreen]);
 
   return (
-    <div className="bg-white flex justify-center w-full relative print:hidden min-w-[335px]" style={{ paddingLeft: '20px', paddingRight: '20px' }}>
-      <div className="max-w-4xl w-full relative">
-        <div className="w-full" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-          <div className="top-0 left-0 w-full h-full rounded-3xl flex justify-center items-center" style={{ backgroundColor: '#636363' }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src={videoURL}
-              title="YouTube live stream"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-3xl top-0 left-0"
-            ></iframe>
-          </div>
+    <div className="bg-white flex justify-center w-full relative print:hidden" style={{ padding: '20px' }}>
+      <div className="max-w-4xl w-full">
+        <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%', height: 0 }}>
+          <iframe
+            ref={iframeRef}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            src={enhancedUrl}
+            title="Live stream"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>

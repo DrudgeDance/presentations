@@ -14,10 +14,10 @@ const App = () => {
       <div className="flex flex-col items-center w-full flex-grow space-y-8">
         <Header />
         <Welcome />
+        <Watch />
         <ProfessionalDevelopment />
         <ModerationPanel />
         <UniversityAcknowledgment />
-        <Watch />
         <Footer />
       </div>
       <div className="w-full bg-[#9b088c] bottom-0 left-0" style={{ height: '1rem' }}></div>

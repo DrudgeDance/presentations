@@ -5,7 +5,7 @@ import NotFound from "../components/NotFound/NotFound.js";
 import Error from "../components/NotFound/Error.js";
 
 import App from "../App.js";
-import WatchLive1 from "../components/TheSciencingChallenge/WatchLive1.js";
+import WatchLive1 from "../components/TheSciencingChallenge/WatchLiveWelcome.js";
 import WatchLiveProtected from "../components/TheSciencingChallenge/WatchLiveProtected.js";
 import ProtectedRoute from "./ProtectedRoute.js";
 
