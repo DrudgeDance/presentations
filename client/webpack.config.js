@@ -7,7 +7,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const isProduction = process.env.NODE_ENV === 'production';
-const outputPath = isProduction ? path.resolve(__dirname, 'dist') : path.resolve(__dirname, 'developmentplaceholder');
+const outputPath = isProduction ? path.resolve(__dirname, 'dist') : path.resolve(__dirname, 'devdist');
 
 export default {
   entry: './src/index.js',

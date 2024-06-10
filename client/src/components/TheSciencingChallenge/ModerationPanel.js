@@ -26,13 +26,13 @@ function CombinedDetails() {
               Judges:
             </h3>
             <p className="text-lg text-left text-[#636363] mb-4">
-              Francisco Peñagaricano, <em>Assistant Professor</em>, Department of Animal and Dairy Sciences at University of Wisconsin-Madison
-            </p>
+              Francisco Peñagaricano, <em>Assistant Professor, Department of Animal and Dairy Sciences at University of Wisconsin-Madison
+            </em></p>
             <p className="text-lg text-left text-[#636363] mb-4">
-              Dr. Anita Menconi, <em>Business Director</em>, Product Line Specialty Nutrition Monogastrics for the Americas at Evonik
-            </p>
+              Dr. Anita Menconi, <em>Business Director, Product Line Specialty Nutrition Monogastrics for the Americas at Evonik
+            </em></p>
             <p className="text-lg text-left text-[#636363] mb-0">
-              Christin Keeffer, <em>Technical Sales Manager Midwest</em>
+              Christin Keeffer, <em>Technical Sales Manager Midwest at RP Nutrients</em>
             </p>
           </div>
         </div>
