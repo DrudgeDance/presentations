@@ -4,20 +4,24 @@ const wauthRouter = express.Router();
 wauthRouter.post(
   "/",
   (req, res, next) => {
-    // Check if the value in req.body is TSC2024 and set the cookie
-    res.locals = (req.body !== "TSC2024") ? {
+    // Convert req.body to lowercase
+    const lowerCaseBody = req.body.toLowerCase();
+
+    // Check the modified value and set the cookie and URL appropriately
+    res.locals = (lowerCaseBody !== "rck2009" && lowerCaseBody !== "tsc2024") ? {
                                               authorized: false, 
                                               url: null
                                             } : 
                                             {
                                               authorized: true, 
-                                              url: 'https://www.youtube.com/embed/live_stream?channel=UCMXjh78o_6pYrJn7ExPaGMw'
+                                              url: lowerCaseBody === "rck2009" ? 
+                                                   'https://www.youtube.com/embed/dQw4w9WgXcQ?si=XuLgEojzREGIpdOa' :  // URL for rck2009
+                                                   'https://www.youtube.com/embed/live_stream?channel=UCMXjh78o_6pYrJn7ExPaGMw'  // URL for tsc2024
                                             };
 
-    if (req.body === "TSC2024") {
-      res.cookie("TheSciencingChallenge", "TSC2024", { secure: true, sameSite: 'Lax' });
+    if (lowerCaseBody === "rck2009" || lowerCaseResource === "tsc2024") {
+      res.cookie("TheSciencingChallenge", lowerCaseBody, { secure: true, sameSite: 'Lax' });
     }
-                                            
 
     console.log(req.body);
     return next();
