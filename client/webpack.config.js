@@ -87,10 +87,5 @@ export default {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new webpack.DefinePlugin({
-      'process.env': {
-          PUBLIC_URL: JSON.stringify('http://www.thesciencingchallenge.com/')
-      }
-    }),
   ],
 };
