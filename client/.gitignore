@@ -4,7 +4,6 @@ dist/
 .pnp.cjs
 .pnp.loader.mjs
 
-
 # DEV MISC - specific files
 .env
 package-lock.json

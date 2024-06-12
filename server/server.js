@@ -1,12 +1,12 @@
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const authRouter = require("./routers/authRouter.js");
+
 const wauthRouter = require("./routers/wauthRouter.js");
 
 require("dotenv").config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 const app = express();
 
 app
@@ -19,7 +19,6 @@ app
 
 // Server Index || Client build path
   .use("/", express.static(path.join(__dirname, "./../client/dist")))
-  .use("/auth", authRouter)
   .use("/wauth", wauthRouter)  // Use wauthRouter
   .get("*", 
     (req, res) => {
