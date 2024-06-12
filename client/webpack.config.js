@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
@@ -85,6 +86,11 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+          PUBLIC_URL: JSON.stringify('http://www.thesciencingchallenge.com/')
+      }
     }),
   ],
 };

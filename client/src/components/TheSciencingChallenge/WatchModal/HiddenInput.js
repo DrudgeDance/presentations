@@ -1,5 +1,5 @@
 import React from 'react';
-import evonikLogo from './../../../assets/icons/evonik.svg';
+import evonikLogo from './../../../assets/images/evonik.svg';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 
 function HiddenCustomInput({ input = '', setInput, showInput, setShowInput }) {
