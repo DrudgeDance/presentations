@@ -15,14 +15,14 @@ app
   .use(cookieParser())
 
 // Serve static files
-  .use(express.static(path.join(__dirname, "../client/dist")))
+  .use(express.static(path.join(__dirname, "../client/dist_prod")))
 
 // Server Index || Client build path
-  .use("/", express.static(path.join(__dirname, "./../client/dist")))
+  .use("/", express.static(path.join(__dirname, "./../client/dist_prod")))
   .use("/wauth", wauthRouter)  // Use wauthRouter
   .get("*", 
     (req, res) => {
-      res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+      res.sendFile(path.join(__dirname, "../client/dist_prod/index.html"));
     }
   )
 

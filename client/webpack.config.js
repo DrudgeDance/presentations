@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const isProduction = process.env.NODE_ENV === 'production';
 
 
-const outputPath = isProduction ? path.resolve(__dirname, 'dist') : path.resolve(__dirname, 'devdist');
+const outputPath = isProduction ? path.resolve(__dirname, 'dist_prod') : path.resolve(__dirname, 'dist_dev');
 
 export default {
   entry: './src/index.js',
