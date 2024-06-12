@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:prod": "NODE_ENV=production webpack --mode production",
     "build:dev": "NODE_ENV=development webpack --mode development",
-    "dev": "webpack serve --open --mode development"
+    "dev": "webpack serve --open --mode development",
+    "cleanup": "rimraf dist/ dist_dev/ dist_prod/ node_modules/ yarn.lock"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +40,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
     "postcss-loader": "^8.1.1",
+    "rimraf": "^5.0.7",
     "style-loader": "^4.0.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
