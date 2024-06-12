@@ -19,7 +19,7 @@ wauthRouter.post(
                                                    'https://www.youtube.com/embed/live_stream?channel=UCMXjh78o_6pYrJn7ExPaGMw'  // URL for tsc2024
                                             };
 
-    if (lowerCaseBody === "rck2009" || lowerCaseResource === "tsc2024") {
+    if (lowerCaseBody === "rck2009" || lowerCaseBody === "tsc2024") {
       res.cookie("TheSciencingChallenge", lowerCaseBody, { secure: true, sameSite: 'Lax' });
     }
 
